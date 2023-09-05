@@ -1,13 +1,13 @@
-#  from django.shortcuts import render
+from django.shortcuts import render
 from django.http import HttpResponse
 
 
 def home_view(request):
-    return HttpResponse("HOME")
+    return render(request, "home.html")
 
 
 def contato_view(request):
-    return HttpResponse("Página de Contatos")
+    return render(request, "contato.html")
 
 
 def usuario_view(request, nome):
@@ -15,7 +15,7 @@ def usuario_view(request, nome):
 
 
 def sobre_view(request):
-    return HttpResponse("Informações sobre a Empresa")
+    return render(request, "sobre.html")
 
 
 def poesia1_view(request):
