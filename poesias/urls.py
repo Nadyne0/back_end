@@ -1,5 +1,7 @@
 from django.urls import path
 import poesias.views as views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path("", views.home_view),
@@ -10,4 +12,5 @@ urlpatterns = [
     path("poesia2/", views.poesia2_view),
     path("poesia3/", views.poesia3_view),
     path("vendas/", views.venda_view),
-]
+    path("blog/", views.blog_view),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

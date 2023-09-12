@@ -34,4 +34,8 @@ def venda_view(request):
     return HttpResponse("Informações sobre Vendas:")
 
 
+def blog_view(request):
+    return HttpResponse("BLOG:")
+
+
 # Create your views here.
