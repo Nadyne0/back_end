@@ -6,15 +6,19 @@
 <head>
     <meta charset="BR-UTF-8">
     <meta name="description" content="Nossa página HOME, onde você encontra as melhores poesias">
-    <title>Poesias</title>
+    <title>Poema Lista</title>
     <link rel="stylesheet" href="{% static '/styles.css' %}" />
 </head>
 
 <body>
 
-    <h1> Minha Página Django </h1>
-
-    <p> Olá Mundo! Essa é minha página Django </p>
+    {% for poema in poema %}
+    <h2>{{ poema.title }}</h2>
+    <p>Por: {{ poema.author.first_name }} {{ poema.author.last_name }}
+    <p>Gênero: {{ poema.genre.name }}</p>
+    <img src="{{ poema.cover.url }}" alt="{{ poema.title }}">
+    <p> {{ poema.full_text }}</p>
+    {% endfor %}
 
 </body>
 

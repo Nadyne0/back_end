@@ -8,6 +8,10 @@ urlpatterns = [
     path("contato/", views.contato_view),
     path("usuario/<str:nome>/", views.usuario_view),
     path("sobre/", views.sobre_view),
+    #
+    path("poema_detalhe/", views.poema_detalhe),
+    #
+    path("poema_lista/", views.poema_lista),
     path("poesia1/", views.poesia1_view),
     path("poesia2/", views.poesia2_view),
     path("poesia3/", views.poesia3_view),

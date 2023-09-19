@@ -1,0 +1,30 @@
+{% include "base_templates/header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="BR-UTF-8">
+    <meta name="description" content="Nossa página HOME, onde você encontra as melhores poesias">
+    <title>Poema Detalhe</title>
+    <link rel="stylesheet" href="{% static '/styles.css' %}" />
+</head>
+
+<body>
+
+    <h1>{{ poema.title }}</h1>
+    <p>Por: {{ poema.author.first_name }} {{ poema.author.last_name }}</p>
+    <p>Gênero: {{ poema.genre.name }}</p>
+    <img src="{{ poema.cover.url }}" alt="{{ poema.title }}">
+
+    {% if poema.is_popular %}
+    <p>⭐ Esta é uma poesia popular!</p>
+    {% endif %}
+
+    <p>{{ poema.full_text }}</p>
+
+</body>
+
+</html>
+
+{% include "base_templates/footer.html" %}

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from poesias.utils.fabrica import fazer_poema
 
 
 def home_view(request):
@@ -16,6 +17,18 @@ def usuario_view(request, nome):
 
 def sobre_view(request):
     return render(request, "sobre.html")
+
+
+# Tag If
+def poema_detalhe(request):
+    poema = fazer_poema()
+    return render(request, "poema_detalhe.html", {"poema": poema})
+
+
+# Tag For
+def poema_lista(request):
+    poema = [fazer_poema() for _ in range(5)]
+    return render(request, "poema_lista.html", {"poema": poema})
 
 
 def poesia1_view(request):
