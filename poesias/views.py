@@ -35,7 +35,7 @@ def venda_view(request):
 
 
 def blog_view(request):
-    return HttpResponse("BLOG:")
+    return HttpResponse("Blog")
 
 
 # Create your views here.

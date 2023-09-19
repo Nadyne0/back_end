@@ -1,9 +1,12 @@
+{% include "base_templates/header.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="BR-UTF-8">
     <meta name="description" content="Esta é uma página de poesias">
+    <link rel="stylesheet" href="{% static '/styles.css' %}" />
     <title>Sobre Nós</title>
 
 </head>
@@ -12,7 +15,9 @@
 
     <h1> Sobre </h1>
 
-    <p style="color: rgb(124, 199, 54)"> Somos uma página de Poesias </p>
+    <p> Somos uma página de Poesias </p>
+
+    {% include "base_templates/footer.html" %}
 
 </body>
 
