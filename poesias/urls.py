@@ -16,5 +16,5 @@ urlpatterns = [
     path("poesia2/", views.poesia2_view),
     path("poesia3/", views.poesia3_view),
     path("vendas/", views.venda_view),
-    path("blog/", views.blog_view),
+    path("/", views.blog_view),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
