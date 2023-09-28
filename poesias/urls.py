@@ -18,3 +18,4 @@ urlpatterns = [
     path("vendas/", views.venda_view),
     path("/", views.blog_view),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
